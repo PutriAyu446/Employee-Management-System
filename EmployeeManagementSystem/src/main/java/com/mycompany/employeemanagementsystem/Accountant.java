@@ -16,7 +16,6 @@ public class Accountant extends Employee implements PaidLeavable {
         this.budgetLimit = budgetLimit;
     }
     
-    //salary di employee itu perbulan atau per apa
     protected String accountingPeriod;
     protected double budgetLimit;
     protected int leaveQuota;;
@@ -28,7 +27,6 @@ public class Accountant extends Employee implements PaidLeavable {
         return freelancer.calculateContractPayment();[cite: 1]
     } else {
         return emp.getSalary(); 
-        //gaji akuntan, dev, sama pm beda kan
     }
 }
     public void generateFinancialReport(List<Employee> daftarKaryawan) {
@@ -62,8 +60,8 @@ public class Accountant extends Employee implements PaidLeavable {
     @Override
     public void displayInfo() {
         // Menampilkan informasi detail akuntan
-        System.out.println("Accountant Name: " + getName());
-        System.out.println("Accounting Period: " + accountingPeriod);
+        System.out.println("Nama Akuntan: " + getName());
+        System.out.println("Periode Akuntan: " + accountingPeriod);
     }
 
     @Override
