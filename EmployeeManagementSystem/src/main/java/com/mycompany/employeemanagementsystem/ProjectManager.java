@@ -9,7 +9,7 @@ package com.mycompany.employeemanagementsystem;
  * @author ACER
  */
 public class ProjectManager extends Employee implements PaidLeavable {
-    protected String managedProject;
+ protected String managedProject;
     protected LocalDate projectDeadline;
     protected int leaveQuota;
 
@@ -22,25 +22,26 @@ public class ProjectManager extends Employee implements PaidLeavable {
     }
 
     public void assignProject(Employee emp) {
-        System.out.println("Assigning project '" + managedProject + "' to " + emp.getName());
+        System.out.println("Pemberian tugas Proyek : " + managedProject + "ke" + emp.getName());
     }
 
     public void submitProgressionReport() {
-        System.out.println("Submitting progression report for project: " + managedProject);
+        System.out.println("Mensubmit Laporan Perkembangan untuk Proyek :" + managedProject);
     }
 
     @Override
     public void displayInfo() {
         super.displayInfo();
-        System.out.println("Managed Project: " + managedProject);
-        System.out.println("Project Deadline: " + projectDeadline);
-        System.out.println("Leave Quota: " + leaveQuota);
+        System.out.println("Proyek Terselesaikan: " + managedProject);
+        System.out.println("Deadline Proyek: " + projectDeadline);
+        System.out.println("Quota keluar : " + leaveQuota);
     }
 
     @Override
     public void performDailyTask() {
-        System.out.println(name + " is managing project timelines and team coordination.");
+        System.out.println(name + " Sedang me-manage timeline proyek dan koordinasi antar tim.");
     }
+
     public String applyLeave() {
         if (this.leaveQuota > 1) {
             this.leaveQuota = this.leaveQuota - 1;
