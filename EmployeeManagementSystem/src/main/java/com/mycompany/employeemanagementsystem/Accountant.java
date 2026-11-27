@@ -67,7 +67,7 @@ public class Accountant extends Employee implements PaidLeavable {
     @Override
     public void performDailyTask() {
         // Tugas harian seorang akuntan
-        System.out.println("Accountant is verifying financial records and ledger.");
+        System.out.println("Akuntan sedang memverifikasi catatan keuangan dan buku besar.");
     }
     
     public String applyLeave() {
