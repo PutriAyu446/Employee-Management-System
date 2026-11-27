@@ -10,7 +10,7 @@ import java.time.LocalDate;
  *
  * @author ACER
  */
-public class FreelanceProjectManager extends Freelancer {
+public class FreelanceProjectManager  extends Freelancer {
     protected String managedProject;
     protected String clientName;
 
@@ -23,23 +23,23 @@ public class FreelanceProjectManager extends Freelancer {
     }
 
     public void assignProject(Employee emp) {
-        System.out.println("Freelance PM " + name + " assigning project '" + managedProject + "' to " + emp.getName());
+        System.out.println("Freelance PM " + name + " Pemberian tugas Proyek'" + managedProject + " ke " + emp.getName());
     }
 
     public void submitProgressionReport() {
-        System.out.println("Submitting progression report for client: " + clientName);
+        System.out.println("Mensubmit Laporan Perkembangan Proyek untuk Klien: " + clientName);
     }
 
     @Override
     public void displayInfo() {
         super.displayInfo();
-        System.out.println("Managed Project: " + managedProject);
-        System.out.println("Client Name: " + clientName);
-        System.out.println("Contract Status: " + checkContractStatus());
+        System.out.println("Proyek yang dikerjakan: " + managedProject);
+        System.out.println("Nama Klien: " + clientName);
+        System.out.println("Status Kontrak: " + checkContractStatus());
     }
 
     @Override
     public void performDailyTask() {
-        System.out.println(name + " is coordinating project '" + managedProject + "' for client " + clientName);
+        System.out.println(name + " Sedang mengkoordinasikan proyek " + managedProject + "untuk klien" + clientName);
     }
 }
